@@ -1,0 +1,28 @@
+{
+  "name": "htmlinit",
+  "version": "1.0.0",
+  "description": "creates a default html project in a current directory",
+  "main": "main.js",
+  "scripts": {
+    "test": "ls"
+  },
+  "bin": {
+      "htmlinit": "./htmlinit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martian17/htmlinit.git"
+  },
+  "keywords": [
+    "html",
+    "init",
+    "setup",
+    "easy"
+  ],
+  "author": "martian17",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martian17/htmlinit/issues"
+  },
+  "homepage": "https://github.com/martian17/htmlinit#readme"
+}
