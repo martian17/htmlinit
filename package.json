@@ -1,6 +1,6 @@
 {
   "name": "htmlinit-command",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "creates a default html project in a current directory",
   "main": "main.js",
   "scripts": {

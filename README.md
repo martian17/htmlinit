@@ -37,11 +37,9 @@ body{
 }
 ```
 ### 
-### style.css
-```css
-body{
-    margin:0px;
-}
+### main.js
+```javascript
+//empty file
 ```
 ### README.md
 ```md
