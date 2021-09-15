@@ -5,7 +5,7 @@ Works on Mac and Linux (Have not tested windows)
 
 ## Install
 ```sh
-$ sudo npm install -g npminit
+$ sudo npm install -g htmlinit-command
 ```
 ## Usage
 ```sh
