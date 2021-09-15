@@ -1,0 +1,4 @@
+"
+
+cp $progdir/src/* ./
+#atom ./

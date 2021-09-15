@@ -4,6 +4,7 @@
   "description": "creates a default html project in a current directory",
   "main": "main.js",
   "scripts": {
+    "install": "./oninstall.sh",
     "test": "ls"
   },
   "bin": {
