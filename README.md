@@ -5,7 +5,7 @@ Works on Mac and Linux (Have not tested windows)
 
 ## Install
 ```sh
-$ npm install -g npminit
+$ sudo npm install -g npminit
 ```
 ## Usage
 ```sh
