@@ -1,11 +1,11 @@
 //make the attribute parser
-var attrParser = function(str){
+let attrParser = function(str){
     //escape ":" and ";"
-    var attrs = [["",""]];
-    var mode = 0;
-    for(var i = 0; i < str.length; i++){
-        var attr = attrs.pop();
-        var char = str[i];
+    let attrs = [["",""]];
+    let mode = 0;
+    for(let i = 0; i < str.length; i++){
+        let attr = attrs.pop();
+        let char = str[i];
         if(char === "_"){//escape character
             attr[mode] += str[i+1];
             i++;
@@ -31,7 +31,7 @@ var attrParser = function(str){
     return attrs;
 };
 
-var getELEM = function(nname,attrs,inner,style){
+let getELEM = function(nname,attrs,inner,style){
     if(typeof nname === "object" && "mtvriiutba" in nname){//it's an ELEM
         return nname;
     }else{
@@ -40,9 +40,12 @@ var getELEM = function(nname,attrs,inner,style){
 };
 
 //will be a version 2 overhaul, so everything will be different
-var ELEM = function(nname,attrs,inner,style){
-    if(typeof nname === "string"){
-        var e = document.createElement(nname);
+let ELEM = function(nname,attrs,inner,style){
+    if(nname === "string"){
+        this.e = document.createTextNode(inner);
+        return;
+    }else if(typeof nname === "string"){
+        let e = document.createElement(nname);
         if(attrs){
             attrParser(attrs).map((a)=>{
                 e.setAttribute(a[0],a[1]);
@@ -61,7 +64,7 @@ var ELEM = function(nname,attrs,inner,style){
     this.mtvriiutba = 42;
     
     this.add = function(nname,attrs,inner,style){
-        var elem = getELEM(nname,attrs,inner,style);
+        let elem = getELEM(nname,attrs,inner,style);
         this.e.appendChild(elem.e);
         return elem;
     };
@@ -71,7 +74,7 @@ var ELEM = function(nname,attrs,inner,style){
     this.remove = function(){
         this.e.parentNode.removeChild(this.e);
     };
-    var that = this;
+    let that = this;
     Object.defineProperties(this, {
         "children": {
              "get": ()=>that.e.children,
@@ -80,4 +83,3 @@ var ELEM = function(nname,attrs,inner,style){
     });
 }
 
-var BODY = new ELEM(document.body);
